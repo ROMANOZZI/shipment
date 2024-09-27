@@ -1,9 +1,16 @@
+import { useEffect } from "react";
+import store from "./state/store";
+import { useSelector } from "react-redux";
+import cookies from "js-cookie";
+import Header from "./components/Header";
 export default function App() {
+  const lang = useSelector((state) => state.language);
+  useEffect(() => {
+    cookies.set("lang", lang);
+  }, [lang]);
   return (
-    <div className="h-screen w-full flex bg-cyan-500 text-center justify-center items-center">
-      <p className="text-3xl text-center font-bold">
-        Hello world!
-      </p>
-    </div>
+    <>
+    <Header />
+    </>
   );
 }
