@@ -5,7 +5,7 @@ const languageSlice = createSlice({
     initialState: cookies.get("lang") || "en",
     reducers:{
      setLanguage:(state,action)=>{
-        state=action.payload;
+        return action.payload;
      }
      
     }
