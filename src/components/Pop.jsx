@@ -51,10 +51,10 @@ export default function Pop() {
                 />
                 <button
                 onClick={()=>{
-                  if(shipmentNumber.length===7){
+                  
                     dispatch(setCurrentShipment(shipmentNumber));
                     dispatch(fetchShipment(shipmentNumber));
-                  }
+                
                 }}
                 className='  w-10 text-2xl font-bold
                  h-10
