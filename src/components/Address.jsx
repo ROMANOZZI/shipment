@@ -7,7 +7,9 @@ export default function Address () {
   const {shipment}=useSelector((state)=>state.shipment);
   return (
     <div className='
-    mr-20
+    lg:mr-20
+    mt-10
+    
     '>
     <h3 className='text-xl 
     mb-10

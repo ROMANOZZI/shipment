@@ -33,7 +33,7 @@ export default function Stage({ state, Done, current }) {
                 </svg>
 
             </div>
-            <p className='text-md text-nowrap absolute top-16  font-bold text-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
+            <p className=' text-wrap  lg:text-nowrap absolute top-16  text-sm font-bold lg:text-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
             </p>
             
 
@@ -42,7 +42,7 @@ export default function Stage({ state, Done, current }) {
     }
 if(state == 'DELIVERED'){
     return(
-        <div className='flex relative flex-col'>
+        <div className='flex relative flex-col '>
             <div className={(Done||current ? 'bg-green' : 'bg-grey')+"   w-15 h-15 p-3 flex rounded-full items-center justify-center  z-10"}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
      width="40px" height="40px" viewBox="0 0 512.000000 512.000000"
@@ -72,7 +72,7 @@ if(state == 'DELIVERED'){
     </g>
     </svg>
             </div>
-            <p className='text-md text-nowrap absolute top-20 font-bold text-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
+            <p className=' lg:text-nowrap absolute top-20 font-bold lg:text-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
             </p>
         </div>
     )
@@ -106,7 +106,7 @@ if(state == 'DELIVERED'){
                     </svg>
                     
                 </div>
-                <p className='text-nowrap text-md absolute top-14 bottom-0 font-bold text-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
+                <p className='text-nowrap  absolute top-14 bottom-0 font-bold lgtext-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
                 </p>
             </div>
         )

@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className='w-full p-4 '>
     <div className='w-full flex justify-between'>
-    <img src={Question} alt='Question' className='w-1/3'/>
+    <img src={Question} alt='Question' className=' w-24 h-24'/>
     <div className='flex flex-col p-6'>
     <p className='text-black  font-bold text-xl '>{t('Contact')}</p>
     </div>

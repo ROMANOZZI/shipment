@@ -20,6 +20,7 @@ export default function Progress() {
     flex items-center justify-between
     m-10
     mb-20
+    lg:mb-10
     relative
     '
     >
