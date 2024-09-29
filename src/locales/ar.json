@@ -1,0 +1,68 @@
+{
+    "Header": {
+        "Home": "الرئيسية",
+        "About": "ألأسعار",
+        "Contact": "كلم المبيعات",
+        "track": "تتبع شحنتك",
+        "Login": "تسجيل الدخول"
+    },
+  
+        "January": "يناير",
+        "February": "فبراير",
+        "March": "مارس",
+        "April": "أبريل",
+        "May": "مايو",
+        "June": "يونيو",
+        "July": "يوليو",
+        "August": "أغسطس",
+        "September": "سبتمبر",
+        "October": "أكتوبر",
+        "November": "نوفمبر",
+        "December": "ديسمبر",
+ 
+
+        "Sunday": "الأحد",
+        "Monday": "الاثنين",
+        "Tuesday": "الثلاثاء",
+        "Wednesday": "الأربعاء",
+        "Thursday": "الخميس",
+        "Friday": "الجمعة",
+        "Saturday": "السبت"
+
+,
+    "ShipmentStates": {
+        "TICKET_CREATED": "تم إنشاءالشحنة",
+        "PACKAGE_RECEIVED": "تم استلام الشحنة" ,
+        "OUT_FOR_DELIVERY": "الشحنة خرجت للتوصيل",
+        "DELIVERED": "تم التسليم",
+        "CANCELLED": "تم إلغاء الشحنة"
+        
+    },
+            "general": {
+            "shipmentNumber": "رقم الشحنة",
+            "lastUpdate": "آخر تحديث",
+            "deliveryDate": "موعد التسليم خلال",
+            "deliveryAddress": "عنوان التسليم",
+            "details": "التفاصيل",
+            "TraderName":"اسم التاجر",
+            "created": "تم إنشاء الشحنة",
+            "received": "تم استلام الشحنة من التاجر",
+            "outForDelivery": "الشحنة خرجت للتسليم",
+            "notDelivered": "لم يتم التوصيل",
+            "delivered": "تم التوصيل",
+            "cancelled": "تم إلغاء الشحنة",
+            "notYetOut": "لم يتم الخروج بعد"
+        },
+    
+        "Address":"إمبابة، شارع طلعت حرب، مدينة العمال، بجوار البرنس، منزل 17"
+
+, "Contact":"هل هناك مشكلة في شحنتك؟"
+,"Alert":"ابلغ عن مشكلة"    
+,"Branch":"الفرع"
+,"Date":"التاريخ"
+,"Time":"الوقت"
+,"Details":"التفاصيل",
+"hub":"فرع مدينة نصر",
+"EL-Mohandseen Hub":"فرع المهندسين",
+"El-Mansoura Hub":"فرع المنصورة"
+}

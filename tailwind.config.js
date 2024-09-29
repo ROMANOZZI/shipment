@@ -6,7 +6,17 @@ export default {
   ],
   theme: {
     extend: {},
+    colors:{
+      red:"#e30613",
+      black:"#4f5665",
+      yellow:"#f9bd0e",
+      green:"#36b600",
+      grey:'#b7b7b7',
+      lightgrey:'#f2f2f2',
+      idle:'#eeeeee',
+      header:"#fafafa"
+    }
   },
-  plugins: [],
+  plugins: [require('tailwind-hamburgers')],
 }
 

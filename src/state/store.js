@@ -1,11 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
-import languageReducer from "./slices/languageSlice";
+import { configureStore ,applyMiddleware } from "@reduxjs/toolkit";
+import rootReducer from "./rootReducer";
+import {thunk} from "redux-thunk";
  const store = configureStore(
     {
-        reducer: {
-            language: languageReducer
-        }
-    }
+        reducer: rootReducer,
+        middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk)
+    },
+   
 );
 
 export default store;

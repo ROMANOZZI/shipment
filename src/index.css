@@ -1,15 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body,html{
-  height: 100%;
-  width: 100%;
-}
-#root{
-  height: 100%;
-  width: 100%;
 
+@font-face {
+  font-family: myFirstFont;
+  src:url("./assets/Fonts/Cairo/static/Cairo-Medium.ttf");
 }
-html, body, #root {
-  height: 100%;
+
+* {
+  font-family: myFirstFont !important;
 }

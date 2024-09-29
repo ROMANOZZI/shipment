@@ -1,0 +1,42 @@
+{
+    "Header": {
+        "Home": "Home",
+        "About": "Pricing",
+        "Contact": "Contact Sales",
+        "track": "Track Your Shipment",
+        "Login": "Login"
+    },
+    "ShipmentStates": {
+        "TICKET_CREATED": "Shipment Created",
+        "PACKAGE_RECEIVED": "Package Received",
+        "OUT_FOR_DELIVERY": "Out for Delivery",
+        "DELIVERED": "Delivered",
+        "CANCELLED": "Cancelled",
+        "IN_PROGRESS": "In Progress"
+    },
+    
+        "general": {
+            "shipmentNumber": "Shipment Number",
+            "lastUpdate": "Last Update",
+            "deliveryDate": "Delivery Date",
+            "deliveryAddress": "Delivery Address",
+            "details": "Details",
+            "created": "Shipment Created",
+            "received": "Shipment Received from Merchant",
+            "TraderName":"Trader Name",
+            "outForDelivery": "Shipment Out for Delivery",
+            "notDelivered": "Not Delivered",
+            "delivered": "Delivered",
+            "cancelled": "Shipment Cancelled",
+            "notYetOut": "Not Yet Out for Delivery"
+        },
+    
+    "Address":"Imbaba, Talaat Harb Street, Al-Omal City, near Al-Prince, House 17",
+    "Contact":"any problem with your shipment?",
+    "Alert":"Report a problem",
+    "hub":"Nasr City Branch",
+    "Mohandseen Hub":"Mohandseen Hub",
+    "El-Mansoura Hub":"El-Mansoura Hub"
+    
+
+}
