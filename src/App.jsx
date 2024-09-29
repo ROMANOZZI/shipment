@@ -12,7 +12,7 @@ import Load from "./assets/Pictures/Laoading.gif";
 import {fetchShipment} from "./state/middleWare/shipmentThunk";
 import General from "./components/General";
 import Address from "./components/Address";
-import Table from "./components/table";
+import Table from "./components/Table";
 export default function App() {
   const lang = useSelector((state) => state.language);
   const [Loading,setLoading]=React.useState(false);
