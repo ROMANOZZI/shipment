@@ -4,12 +4,15 @@ import { setLanguage } from '../state/slices/languageSlice';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import Pop from './Pop';
 export default function Header() {
   const lang = useSelector((state) => state.language);
   const dispatch = useDispatch();
   const { t } = useTranslation("global");
   const [isOpen, setIsOpen] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1150);
+  const [open,setOpen]=useState(false);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,9 +40,27 @@ export default function Header() {
           <button className='bg-white  hover:text-red text-black text-2xl font-semibold outline-none border-none p-2 m-2'>{t("Header.About")}</button>
           <button className='bg-white  hover:text-red text-black text-2xl font-semibold outline-none border-none p-2 m-2'>{t("Header.Contact")}</button>
         </div>
-        <div className='flex '>
-          <button className='bg-white  hover:text-red text-black text-2xl font-semibold outline-none border-none p-2 m-2'>{t("Header.track")}</button>
-          <button className='bg-white  hover:text-red text-black text-2xl font-semibold outline-none border-none p-2 m-2'>{t("Header.Login")}</button>
+        <div className='flex relative '>
+          <div>
+          <button 
+           onClick={()=>setOpen(!open)}
+           style={
+            
+            
+              open ? {
+              boxShadow:'0px 0px 10px 0px rgba(0, 0, 0, 0.1)',
+                
+            
+              } : {
+                
+              }
+             }
+           className='bg-white  hover:text-red text-black text-2xl font-semibold outline-none border-none p-2 m-2'>{t("Header.track")}</button>
+          <Pop/>
+          </div>
+          <button
+           
+          className='bg-white  hover:text-red text-black text-2xl font-semibold outline-none border-none p-2 m-2'>{t("Header.Login")}</button>
         </div>
         <div className='flex ml-2'>
           <button
@@ -64,7 +85,23 @@ export default function Header() {
 
         <div className='flex justify-between items-center w-full'>
           <div className='flex w-full justify-end'>
-          <button className='bg-white mx-10 hover:text-red text-black text-sm  lg:text-xl font-semibold outline-none border-none p-2 m-0'>{t("Header.track")}</button>
+          <div>
+          <button 
+           onClick={()=>setOpen(!open)}
+           style={
+            
+            
+              open ? {
+              boxShadow:'0px 0px 10px 0px rgba(0, 0, 0, 0.1)',
+                
+            
+              } : {
+                
+              }
+             }
+           className='bg-white  hover:text-red text-black text-2xl font-semibold outline-none border-none p-2 m-2'>{t("Header.track")}</button>
+          <Pop/>
+          </div>
           </div>
    
         </div>

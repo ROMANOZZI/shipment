@@ -13,13 +13,15 @@ import {fetchShipment} from "./state/middleWare/shipmentThunk";
 import General from "./components/General";
 import Address from "./components/Address";
 import Table from "./components/Table";
+
 export default function App() {
   const lang = useSelector((state) => state.language);
+  const currentShipment=useSelector((state)=>state.currentShipment);
   const [Loading,setLoading]=React.useState(false);
   const {shipment,loading,error}=useSelector((state)=>state.shipment);
   const dispatch=useDispatch();
   useEffect(() => {
-    dispatch(fetchShipment());
+    dispatch(fetchShipment(currentShipment));
   }, [dispatch]);
   useEffect(() => {
     i18n.changeLanguage(lang);

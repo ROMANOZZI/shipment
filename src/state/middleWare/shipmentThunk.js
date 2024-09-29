@@ -22,10 +22,10 @@ export const getShipmentFailure=(error)=>{
         shipment:null
     }})
 }
-export const fetchShipment=()=> async (dispatch,getState)=>{
+export const fetchShipment=(currentShipment)=> async (dispatch,getState)=>{
     dispatch(getShipment())
     try{
-        const response=await axios.get(import.meta.env.VITE_API_URL+`/${"84043113"}`);
+        const response=await axios.get(import.meta.env.VITE_API_URL+`/${currentShipment}`);
         let color=null;
         let data=response.data;
         switch(response.data.CurrentStatus.state){

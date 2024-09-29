@@ -14,7 +14,8 @@ export default {
       grey:'#b7b7b7',
       lightgrey:'#f2f2f2',
       idle:'#eeeeee',
-      header:"#fafafa"
+      header:"#fafafa",
+      light:"#f5f5f5"
     }
   },
   plugins: [],
