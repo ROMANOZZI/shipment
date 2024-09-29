@@ -17,6 +17,6 @@ export default {
       header:"#fafafa"
     }
   },
-  plugins: [require('tailwind-hamburgers')],
+  plugins: [],
 }
 
