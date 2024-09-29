@@ -99,7 +99,7 @@ export default function Header() {
                 
               }
              }
-           className='bg-white  hover:text-red text-black text-2xl font-semibold outline-none border-none p-2 m-2'>{t("Header.track")}</button>
+           className='bg-white  hover:text-red text-black lg:text-2xl text-md font-semibold outline-none border-none lg:p-2 m-2'>{t("Header.track")}</button>
           {open && <Pop/>}
           </div>
           </div>

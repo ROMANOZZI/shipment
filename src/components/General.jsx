@@ -15,20 +15,20 @@ export default function General() {
     <div className='w-full max-w-7xl bg-red-500 shadow-lg rounded-md mx-auto mt-4 sm:mt-6 md:mt-8 lg:mt-10'>
       <div className='flex flex-col  sm:flex-row  w-full shadow-lg p-3 sm:p-4 md:p-5 lg:p-6 justify-between'>
         <div className='flex flex-col mb-3 md:mb-0 sm:mr-2 text-center md:text-left '>
-          <p className='text-2xs sm:text-xs md:text-sm lg:text-base font-semibold text-grey mb-1 '>{t(`general.shipmentNumber`) + " " + shipment?.TrackingNumber}</p>
-          <p className='text-xs sm:text-sm md:text-base lg:text-lg font-bold' style={{color:shipment?.color}}>{t(`ShipmentStates.${shipment?.CurrentStatus?.state}`)}</p>
+          <p className='text-md sm:text-xs md:text-sm lg:text-base font-semibold text-grey mb-1 '>{t(`general.shipmentNumber`) + " " + shipment?.TrackingNumber}</p>
+          <p className='text-md text-lg  lg:text-lg font-bold' style={{color:shipment?.color}}>{t(`ShipmentStates.${shipment?.CurrentStatus?.state}`)}</p>
         </div>
         <div className='mb-3 sm:mb-0 sm:mr-2 text-center md:text-left'>
-          <p className='text-2xs sm:text-xs md:text-sm lg:text-base font-semibold text-grey mb-1'>{t(`general.lastUpdate`)}</p>
-          <p className='text-xs sm:text-sm md:text-base lg:text-lg font-bold'>{nextWorkingDay ? t(nextWorkingDay?.dayName) + " " + nextWorkingDayDate : ''}</p>
+          <p className='text-md sm:text-xs md:text-sm lg:text-base font-semibold text-grey mb-1'>{t(`general.lastUpdate`)}</p>
+          <p className='text-md lg:text-lg font-bold'>{nextWorkingDay ? t(nextWorkingDay?.dayName) + " " + nextWorkingDayDate : ''}</p>
         </div>
         <div className='mb-3 sm:mb-0 sm:mr-2 text-center md:text-left'>
-          <p className='text-2xs sm:text-xs md:text-sm lg:text-base font-semibold text-grey mb-1'>{t(`general.TraderName`)}</p>
-          <p className='text-xs sm:text-sm md:text-base lg:text-lg font-bold'>{"SOUQ.COM"}</p>
+          <p className='text-md  lg:text-base font-semibold text-grey mb-1'>{t(`general.TraderName`)}</p>
+          <p className='text-md  lg:text-lg font-bold'>{"SOUQ.COM"}</p>
         </div>
         <div className='text-center md:text-left'>
-          <p className='text-2xs sm:text-xs md:text-sm lg:text-base font-semibold text-grey mb-1'>{t(`general.deliveryDate`)}</p>
-          <p className='text-xs sm:text-sm md:text-base lg:text-lg font-bold'>{DeliveryDate}</p>
+          <p className='text-md sm:text-xs md:text-sm lg:text-base font-semibold text-grey mb-1'>{t(`general.deliveryDate`)}</p>
+          <p className='text-md  lg:text-lg font-bold'>{DeliveryDate}</p>
         </div>
       </div>
      

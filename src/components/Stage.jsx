@@ -43,7 +43,7 @@ export default function Stage({ state, Done, current }) {
 if(state == 'DELIVERED'){
     return(
         <div className='flex relative flex-col '>
-            <div className={(Done||current ? 'bg-green' : 'bg-grey')+"   w-15 h-15 p-3 flex rounded-full items-center justify-center  z-10"}>
+            <div className={(Done||current ? 'bg-green' : 'bg-grey')+"   w-12 h-12 md:w-16 md:h-16 p-3 flex rounded-full items-center justify-center  z-10"}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
      width="40px" height="40px" viewBox="0 0 512.000000 512.000000"
      preserveAspectRatio="xMidYMid meet">
