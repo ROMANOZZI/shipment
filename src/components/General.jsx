@@ -8,9 +8,9 @@ export default function General() {
   const {t}=useTranslation('global');
   const {shipment,loading,error}=useSelector((state)=>state.shipment);
   moment().locale(lang);
-  const nextWorkingDay=shipment?.nextWorkingDay[0];
-  const nextWorkingDayDate=moment(nextWorkingDay?.date).format('DD-MM-YYYY ')+" at "+moment(nextWorkingDay?.date).format('h:mm a');
-  const DeliveryDate=moment(nextWorkingDay?.date).format('DD ')+t(moment(nextWorkingDay?.date).format('MMMM'))+" "+moment(nextWorkingDay?.date).format('YYYY'); 
+  const nextWorkingDay=shipment?.nextWorkingDay?.[0];
+  const nextWorkingDayDate=nextWorkingDay ? moment(nextWorkingDay?.date).format('DD-MM-YYYY ')+" at "+moment(nextWorkingDay?.date).format('h:mm a') : '';
+  const DeliveryDate=nextWorkingDay ? moment(nextWorkingDay?.date).format('DD ')+t(moment(nextWorkingDay?.date).format('MMMM'))+" "+moment(nextWorkingDay?.date).format('YYYY') : ''; 
   return (
     <div className='w-full max-w-7xl bg-red-500 shadow-lg rounded-md mx-auto mt-4 sm:mt-6 md:mt-8 lg:mt-10'>
       <div className='flex flex-col  sm:flex-row  w-full shadow-lg p-3 sm:p-4 md:p-5 lg:p-6 justify-between'>
@@ -20,7 +20,7 @@ export default function General() {
         </div>
         <div className='mb-3 sm:mb-0 sm:mr-2 text-center md:text-left'>
           <p className='text-2xs sm:text-xs md:text-sm lg:text-base font-semibold text-grey mb-1'>{t(`general.lastUpdate`)}</p>
-          <p className='text-xs sm:text-sm md:text-base lg:text-lg font-bold'>{t(shipment?.nextWorkingDay[0]?.dayName) + " " + nextWorkingDayDate}</p>
+          <p className='text-xs sm:text-sm md:text-base lg:text-lg font-bold'>{nextWorkingDay ? t(nextWorkingDay?.dayName) + " " + nextWorkingDayDate : ''}</p>
         </div>
         <div className='mb-3 sm:mb-0 sm:mr-2 text-center md:text-left'>
           <p className='text-2xs sm:text-xs md:text-sm lg:text-base font-semibold text-grey mb-1'>{t(`general.TraderName`)}</p>

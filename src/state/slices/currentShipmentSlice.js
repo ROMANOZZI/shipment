@@ -6,7 +6,7 @@ export const currentShipmentSlice = createSlice({
     initialState,
     reducers: {
         setCurrentShipment: (state, action) => {
-            state.currentShipment = action.payload;
+            return action.payload;
         }
     }
 })

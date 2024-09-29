@@ -18,10 +18,11 @@ export default function Progress() {
     <div
     className='w-full h-2 bg-idle
     flex items-center justify-between
-    m-10
-    mb-20
+    m-12
+    mb-24
     lg:mb-10
     relative
+    
     '
     >
         {

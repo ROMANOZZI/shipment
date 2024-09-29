@@ -1,7 +1,16 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { setCurrentShipment } from '../state/slices/currentShipmentSlice';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import {fetchShipment} from "../state/middleWare/shipmentThunk";
 export default function Pop() {
     const { t } = useTranslation('global');
+    const lang = useSelector((state) => state.language);
+    const [shipmentNumber,setShipmentNumber]=useState("");
+    const currentShipment = useSelector((state) => state.shipment);
+    const dispatch = useDispatch();
     return (
         <div className='
          lg:pl-10
@@ -20,24 +29,49 @@ export default function Pop() {
             <div className='flex justify-between flex-col '>
                 <h1 className='lg:text-xl lg:font-bold lg:p-4 p-2 text-lg font-semibold'>{t("Header.track")}</h1>
                 <div className='flex justify-between align-middle'>
-                <input type="text" placeholder={t("Enter")} className='
+                <input type="text" placeholder={t("Enter")}
+                onChange={(e)=>setShipmentNumber(e.target.value)}
+                className='
                 h-10
                 shadow-md
                 text-sm
                 lg:text-base
                 outline-none border-none p-2 w-full' 
-                style={{
+                style={lang === "ar" ? 
+                    {
                     borderRadius: '0 0.5em  0.5em 0',
-                    
-                }}
+                
+                    }
+                    :
+                    {
+                    borderRadius: '0.5em 0 0 0.5em',
+                    }
+
+                }
                 />
-                <button className='  w-10 text-2xl font-bold
+                <button
+                onClick={()=>{
+                  if(shipmentNumber.length===7){
+                    dispatch(setCurrentShipment(shipmentNumber));
+                    dispatch(fetchShipment(shipmentNumber));
+                  }
+                }}
+                className='  w-10 text-2xl font-bold
                  h-10
                 bg-red text-white  p-2 flex items-center justify-center'
-                style={{
-                    borderRadius: '0.5em 0 0 0.5em',
-                    
-                }}
+                style={lang == "ar" ? 
+                    {
+                        
+                        borderRadius: '0.5em 0 0 0.5em',
+                       
+                    }
+                    :
+                    {
+                    borderRadius: '0 0.5em  0.5em 0',
+            
+                    }
+
+                }
                 >
 
 

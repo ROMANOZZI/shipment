@@ -9,6 +9,7 @@ export default function Contact() {
     <img src={Question} alt='Question' className=' w-24 h-24'/>
     <div className='flex flex-col p-6'>
     <p className='text-black  font-bold text-xl '>{t('Contact')}</p>
+    <button className='bg-red text-light font-bold mt-4 text-white p-2 rounded-md'>{t('Alert')}</button>
     </div>
     
     </div>

@@ -56,7 +56,7 @@ export default function Header() {
               }
              }
            className='bg-white  hover:text-red text-black text-2xl font-semibold outline-none border-none p-2 m-2'>{t("Header.track")}</button>
-          <Pop/>
+          {open && <Pop/>}
           </div>
           <button
            
@@ -100,7 +100,7 @@ export default function Header() {
               }
              }
            className='bg-white  hover:text-red text-black text-2xl font-semibold outline-none border-none p-2 m-2'>{t("Header.track")}</button>
-          <Pop/>
+          {open && <Pop/>}
           </div>
           </div>
    
