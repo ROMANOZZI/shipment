@@ -1,9 +1,35 @@
 
-body, html, #root {
-    height: 100%;
+
+/*CSS*/
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    margin: 10px;
+    height: 30px;
+  }
+
+  .btn-line {
     width: 100%;
-    overflow-x: hidden !important;
-};
-*{
-    overflow-x: hidden !important;
-};
+    height: 6px ;
+    background: #4f5665;
+    margin: 3px auto;
+    transition: all .3s ease-in-out;
+  }
+
+  /*Animate lines*/
+  .menu-btn.open .btn-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-btn.open .btn-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .menu-btn.open .btn-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }

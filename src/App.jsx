@@ -14,6 +14,7 @@ import General from "./components/General";
 import Address from "./components/Address";
 import Table from "./components/Table";
 import Error from "./components/Error";
+import List from "./components/List";
 
 export default function App() {
   const lang = useSelector((state) => state.language);
@@ -60,7 +61,9 @@ if(error){
     {!loading  ? (
       <>
       <Header />
+
       <General/>
+      <List/>
       <div className="h-50 w-3/4 mx-auto mt-10 flex flex-col 2xl:flex-row">
       <Table/>
         <Address/>
