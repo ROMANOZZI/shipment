@@ -94,6 +94,9 @@ export default function Header() {
           <div className='flex w-full  justify-end'>
           <div className='flex '>
           <button
+          onClick={()=>{setOpen(!open)}}
+           
+          
 
            style={
 
@@ -108,12 +111,12 @@ export default function Header() {
              }
            className='bg-white  hover:text-red text-black lg:text-2xl text-md font-semibold outline-none border-none lg:p-2 m-2'>{t("Header.track")}</button>
           {open && <Pop/>}
-          <div class={`menu-btn ${list?"open":""}`}
+          <div className={`menu-btn ${list?"open":""}`}
           onClick={()=>dispatch(setList(!list))}
           >
-  <div class="btn-line"></div>
-  <div class="btn-line"></div>
-  <div class="btn-line"></div>
+  <div className="btn-line"></div>
+  <div className="btn-line"></div>
+  <div className="btn-line"></div>
 </div>
           </div>
           </div>
