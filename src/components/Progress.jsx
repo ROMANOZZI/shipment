@@ -9,20 +9,22 @@ export default function Progress() {
       "PACKAGE_RECEIVED",
       "OUT_FOR_DELIVERY",
       "DELIVERED",
-      
+
     ]);
     const {t}=useTranslation("global");
-    
+
   return (
     <>
     <div
     className='w-full h-2 bg-idle
     flex items-center justify-between
+    box-content
+    p-0
     m-12
     mb-24
     lg:mb-10
     relative
-    
+
     '
     >
         {
@@ -33,7 +35,7 @@ export default function Progress() {
                {index<shipment?.TransitEvents.length-1&&<div className='w-full h-2' style={{
                 backgroundColor:shipment?.color
                }}></div>}
-              
+
                 </>
                 )
             })

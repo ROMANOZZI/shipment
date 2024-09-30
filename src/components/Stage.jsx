@@ -14,7 +14,7 @@ export default function Stage({ state, Done, current }) {
                 className='rounded-full w-8 h-8 flex items-center justify-center
                 p-2
                 z-10
-                
+
                 '
                 style={{
                     backgroundColor: color
@@ -35,7 +35,7 @@ export default function Stage({ state, Done, current }) {
             </div>
             <p className=' text-wrap  lg:text-nowrap absolute top-16  text-sm font-bold lg:text-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
             </p>
-            
+
 
         </div>
         )
@@ -49,7 +49,7 @@ if(state == 'DELIVERED'){
      preserveAspectRatio="xMidYMid meet">
 
     <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-    fill={Done||current?  "#ffffff" : "#000000"} stroke="none">
+    fill={Done||current?  "#ffffff" : "#7B7B7B"} stroke="none">
     <path d="M0 2850 l0 -1920 1344 0 1344 0 -30 85 c-53 155 -71 271 -71 460 0
     137 4 190 21 272 121 566 536 986 1101 1114 113 25 347 36 464 20 80 -11 246
     -49 290 -66 16 -7 17 44 17 974 l0 981 -745 0 -745 0 0 -557 0 -558 -157 -130
@@ -77,34 +77,22 @@ if(state == 'DELIVERED'){
         </div>
     )
 }
-   
+
         return (
             <div className='flex relative flex-col'>
                 <div
                     className='rounded-full w-15 h-15 flex items-center justify-center
-                    p-2
+
                     z-10
+                    relative
+                    right-2
                     '
                     style={{
                         backgroundColor: color
                     }}
                 >
-                    <svg fill="#ffffff " height="50px" width="50px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0 0 32 32" xml:space="preserve"
-                        style={{transform: lang =='ar' ? 'scaleX(-1)' : 'none'}}
-                        >
-                        <g>
-                            <path d="M26,27c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S27.7,27,26,27z" />
-                        </g>
-                        <g>
-                            <path d="M10,27c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S11.7,27,10,27z" />
-                        </g>
-                        <path d="M31.8,17.4l-4-5C27.6,12.1,27.3,12,27,12h-5V9c0-0.6-0.4-1-1-1H5C4.4,8,4,8.4,4,9v1h1c0.6,0,1,0.4,1,1s-0.4,1-1,1H4H3
-        c-0.6,0-1,0.4-1,1s0.4,1,1,1h1h2c0.6,0,1,0.4,1,1s-0.4,1-1,1H4H1c-0.6,0-1,0.4-1,1s0.4,1,1,1h3v6c0,0.6,0.4,1,1,1h0.1
-        C5,24.7,5,24.3,5,24c0-2.8,2.2-5,5-5s5,2.2,5,5c0,0.3,0,0.7-0.1,1H21h0.1C21,24.7,21,24.3,21,24c0-2.8,2.2-5,5-5s5,2.2,5,5
-        c0,0.3,0,0.7-0.1,1H31c0.6,0,1-0.4,1-1v-6C32,17.8,31.9,17.6,31.8,17.4z"/>
-                    </svg>
-                    
+        <div className='bg-grey rounded-full  w-8 h-8'></div>
+
                 </div>
                 <p className='text-nowrap  absolute top-14 bottom-0 font-bold lgtext-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
                 </p>
