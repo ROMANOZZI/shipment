@@ -21,17 +21,17 @@ export default function Progress() {
     box-content
     p-0
     m-12
-    mb-24
-    lg:mb-10
+    mb-64
+    lg:mb-20
     relative
 
     '
     >
         {
-            states.map((state,index)=>{
+            shipment?.TransitEvents?.map((state,index)=>{
                 return (
                 <>
-                <Stage key={index} state={state} Done={index<shipment?.TransitEvents.length-1} current={index===shipment?.TransitEvents.length-1}/>
+                <Stage key={index} state={state} Done={true} current={state.state===shipment?.CurrentStatus?.state} reason={state?.reason}/>
                {index<shipment?.TransitEvents.length-1&&<div className='w-full h-2' style={{
                 backgroundColor:shipment?.color
                }}></div>}

@@ -35,7 +35,13 @@
         "PACKAGE_RECEIVED": "تم استلام الشحنة" ,
         "OUT_FOR_DELIVERY": "الشحنة خرجت للتوصيل",
         "DELIVERED": "تم التسليم",
-        "CANCELLED": "تم إلغاء الشحنة"
+        "CANCELLED": "تم إلغاء الشحنة",
+        "NOT_YET_SHIPPED":"متاح للتسليم",
+"WAITING_FOR_CUSTOMER_ACTION":"بانتظار رد العميل",
+"DELIVERY_FAILED":"فشل التسليم",
+"DELIVERED_TO_SENDER":"تم التسليم للمرسل",
+"AVAILABLE_FOR_PICKUP":"متاح للإستلام",
+"IN_TRANSIT":"قيد الإنتقال"
 
     },
             "general": {
@@ -66,5 +72,11 @@
 "EL-Mohandseen Hub":"فرع المهندسين",
 "El-Mansoura Hub":"فرع المنصورة",
 "Enter":"ادخل رمز الشحنة",
-"Error":"الشحنة غير موجودة"
+"Error":"الشحنة غير موجودة",
+
+"Uncovered Zone":"منطقة غير مغطاة",
+"Cairo Sorting Facility":"مركز الفرز بالقاهرة",
+"Beni Suef Hub":"فرع بنى سويف",
+"FM & Reverse Hub":"فرع FM & Reverse",
+"Cancellation - The customer refuses to give the shipment to the star":" العميل يرفض تسليم الشحنة "
 }

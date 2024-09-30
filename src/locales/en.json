@@ -12,7 +12,13 @@
         "OUT_FOR_DELIVERY": "Out for Delivery",
         "DELIVERED": "Delivered",
         "CANCELLED": "Cancelled",
-        "IN_PROGRESS": "In Progress"
+        "IN_PROGRESS": "In Progress",
+        "WAITING_FOR_CUSTOMER_ACTION":"Waiting for Customer Action",
+        "DELIVERY_FAILED":"Delivery Failed",
+        "DELIVERED_TO_SENDER":"Delivered to Sender",
+        "NOT_YET_SHIPPED":"Available for delivery",
+        "AVAILABLE_FOR_PICKUP":"Available for Pickup",
+        "IN_TRANSIT":"In Transit"
     },
 
         "general": {
@@ -38,6 +44,13 @@
     "Mohandseen Hub":"Mohandseen Hub",
     "El-Mansoura Hub":"El-Mansoura Hub",
     "Enter":"Enter your tracking number",
-    "Error":"Shipment not found"
+    "Error":"Shipment not found",
+"NOT_YET_SHIPPED":"Available for delivery",
+    "Branch":"Branch",
+    "Date":"Date",
+    "Time":"Time",
+    "Details":"Details",
+    "Cancellation - The customer refuses to give the shipment to the star":"The customer refuses to give the shipment "
+
 
 }

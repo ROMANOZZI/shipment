@@ -10,7 +10,7 @@ export default function General() {
   moment().locale(lang);
   const nextWorkingDay=shipment?.nextWorkingDay?.[0];
   const nextWorkingDayDate=nextWorkingDay ? moment(nextWorkingDay?.date).format('DD-MM-YYYY ')+" at "+moment(nextWorkingDay?.date).format('h:mm a') : '';
-  const DeliveryDate=nextWorkingDay ? moment(nextWorkingDay?.date).format('DD ')+t(moment(nextWorkingDay?.date).format('MMMM'))+" "+moment(nextWorkingDay?.date).format('YYYY') : ''; 
+  const DeliveryDate=nextWorkingDay ? moment(nextWorkingDay?.date).format('DD ')+t(moment(nextWorkingDay?.date).format('MMMM'))+" "+moment(nextWorkingDay?.date).format('YYYY') : '';
   return (
     <div className='w-full max-w-7xl bg-red-500 shadow-lg rounded-md mx-auto mt-4 sm:mt-6 md:mt-8 lg:mt-10'>
       <div className='flex flex-col  sm:flex-row  w-full shadow-lg p-3 sm:p-4 md:p-5 lg:p-6 justify-between'>
@@ -31,8 +31,8 @@ export default function General() {
           <p className='text-md  lg:text-lg font-bold'>{DeliveryDate}</p>
         </div>
       </div>
-     
-      <div className='flex w-full justify-between p-3  sm:p-4 md:p-5 lg:p-10'>
+
+      <div className='flex w-full  justify-between p-3 md:p-5 lg:p-10'>
         <Progress/>
       </div>
     </div>

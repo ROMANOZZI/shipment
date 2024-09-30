@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import Current from '../assets/Pictures/truck.svg';
-export default function Stage({ state, Done, current }) {
+export default function Stage({ state, Done, current ,reason }) {
     const lang = useSelector((state) => state.language);
     const { shipment, loading, error } = useSelector((state) => state.shipment);
     const color = shipment?.color;
@@ -10,35 +10,39 @@ export default function Stage({ state, Done, current }) {
     if (Done) {
         return (
             <div className='flex relative flex-col'>
-            <div
-                className='rounded-full w-8 h-8 flex items-center justify-center
-                p-2
-                z-10
-
-                '
-                style={{
-                    backgroundColor: color
-                }}
-            >
-                <svg fill={"#ffffff"} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    width="50px" height="50px" viewBox="0 0 335.765 335.765"
-                    xml:space="preserve"
-
+                <div
+                    className='rounded-full w-8 h-8 flex items-center justify-center p-2 z-10'
+                    style={{
+                        backgroundColor: color
+                    }}
                 >
-                    <g>
+                    <svg
+                        fill={"#ffffff"}
+                        version="1.1"
+                        id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="50px"
+                        height="50px"
+                        viewBox="0 0 335.765 335.765"
+                        xml:space="preserve"
+                    >
                         <g>
-                            <polygon points="311.757,41.803 107.573,245.96 23.986,162.364 0,186.393 107.573,293.962 335.765,65.795 		" />
+                            <g>
+                                <polygon points="311.757,41.803 107.573,245.96 23.986,162.364 0,186.393 107.573,293.962 335.765,65.795" />
+                            </g>
                         </g>
-                    </g>
-                </svg>
+                    </svg>
+                </div>
 
+                <div className='   h-fit flex flex-col text-wrap lg:text-nowrap  absolute top-10 max-w-5 lg:text-md left-1/2 transform -translate-x-1/2'>
+                    <p className='text-xs lg:text-sm font-bold'>{t("ShipmentStates." + state.state)}</p>
+                   {reason&& <p className='text-xs font-semibold ' style={{
+                        color: shipment?.color
+                    }}>{t(reason)}</p>}
+                </div>
             </div>
-            <p className=' text-wrap  lg:text-nowrap absolute top-16  text-sm font-bold lg:text-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
-            </p>
-
-
-        </div>
-        )
+        );
     }
 if(state == 'DELIVERED'){
     return(
@@ -94,7 +98,7 @@ if(state == 'DELIVERED'){
         <div className='bg-grey rounded-full  w-8 h-8'></div>
 
                 </div>
-                <p className='text-nowrap  absolute top-14 bottom-0 font-bold lgtext-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
+                <p className='text-nowrap  absolute top-10 bottom-0 font-bold lgtext-xl left-1/2 transform -translate-x-1/2'>{t("ShipmentStates."+state)}
                 </p>
             </div>
         )
